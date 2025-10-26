@@ -1,3 +1,5 @@
+This Frontend end is only possible because of https://github.com/janarosmonaliev/github-globe (Janar Osmonaliev) Github Globe Repo
+
 ### Steps to Run
 
 1. Install Dependencies
