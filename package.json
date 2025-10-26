@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config=webpack.prod.js",
     "build-dev": "webpack --config=webpack.dev.js",
-    "start": "webpack serve webpack-dev-server --open --config=webpack.dev.js"
+    "start": "webpack serve --config webpack.dev.js --open"
   },
   "keywords": [
     "pandemic",
@@ -17,16 +17,17 @@
   ],
   "author": "Zhanarbek Osmonaliev",
   "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.4",
+    "json-loader": "^0.5.7",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  },
   "dependencies": {
     "three": "^0.128.0",
     "three-globe": "^2.18.8",
     "three-glow-mesh": "^0.1.2"
-  },
-  "devDependencies": {
-    "file-loader": "^6.2.0",
-    "json-loader": "^0.5.7",
-    "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.2"
   }
 }

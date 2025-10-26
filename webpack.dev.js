@@ -1,16 +1,16 @@
-const path = require("path");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: ["./src/index.js"],
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-    open: false,
-    hot: true,
-    writeToDisk: true,
+  mode: 'development',
+
+  entry: './src/index.js', // your main JS file
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true, // cleans dist folder before build
   },
-  plugins: [],
+
   module: {
     rules: [
       {
@@ -23,8 +23,26 @@ module.exports = {
       },
     ],
   },
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html', // your source HTML
+      filename: 'index.html',       // output file
+    }),
+  ],
+
+  devServer: {
+    client:{
+      overlay: false,   // disables the red error overlay
+    },
+    static: {
+      directory: path.join(__dirname, 'dist'), // serve dist folder
+    },
+    devMiddleware: {
+      writeToDisk: true, // ✅ important: writes files to disk
+    },
+    port: 8080,
+    open: true, // opens browser automatically
+    hot: true,  // enables hot reload
   },
 };
