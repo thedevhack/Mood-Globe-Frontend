@@ -19,7 +19,7 @@ var countries = null;
 var userMoodValue = null;
 
 
-const domain = "https://mood-globe-backend.onrender.com"
+const domain = "<your-own-domain>"
 
 
 function setUserMoodValue(moodValue){
