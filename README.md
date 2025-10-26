@@ -1,4 +1,4 @@
-This Frontend end is only possible because of https://github.com/janarosmonaliev/github-globe (Janar Osmonaliev) Github Globe Repo
+This Frontend is only possible because of https://github.com/janarosmonaliev/github-globe (Janar Osmonaliev) Github Globe Repo
 
 ### Steps to Run
 
